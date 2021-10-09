@@ -52,7 +52,7 @@ class CalculatorWidget(Widget):
 
     def dot(self):
         prev_number = self.ids.input_box.text
-        num_list = re.split("\+/\*/-///%", prev_number)
+        num_list = re.split("\+|\*|-|/|%", prev_number)
 
         if ("+" in prev_number or "-" in prev_number or "/" in prev_number or "*" in prev_number or "%" in prev_number) and "." not in num_list[-1]:
             prev_number = f"{prev_number}."
